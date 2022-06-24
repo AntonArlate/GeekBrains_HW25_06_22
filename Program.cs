@@ -1,16 +1,18 @@
 ﻿// Это Main работа. Версии при их наличии будут распределены в репозитории по соответствующим веткам.
 
-int programm;
-Boolean exit = true;
+int programm, num;
+Boolean begin = true;
 
-while (exit)
+while (begin)
 {
-    Console.WriteLine("Введите число для соответствующей задачи:");
+    Console.WriteLine("------");
+    Console.WriteLine("Введите число для соответствующей задачи или иное для выхода:");
     Console.WriteLine("1. На вход принимает два числа и выдаёт, какое число большее, а какое меньшее.");
     Console.WriteLine("2. Принимает на вход три числа и выдаёт максимальное из этих чисел.");
     Console.WriteLine("3. На вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).");
     Console.WriteLine("4. На вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.");
     programm = Convert.ToInt32(Console.ReadLine());
+    
     switch (programm)
     {
         case 1:
@@ -58,7 +60,8 @@ while (exit)
         case 3:
             // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
-            int num = 10;
+            Console.WriteLine("Введите число:");
+            num = Convert.ToInt32(Console.ReadLine());
 
             if (num % 2 == 1)
             {
@@ -77,7 +80,7 @@ while (exit)
             bool not = true;
 
             Console.WriteLine("Введите число:");
-            int num = Convert.ToInt32(Console.ReadLine());
+            num = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Чётные числа от 1 до " + num);
             while (i <= num)
@@ -97,7 +100,7 @@ while (exit)
             break;
 
         default:
-            exit = false;
+            begin = false;
             break;
     }
 }
