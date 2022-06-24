@@ -54,9 +54,22 @@ while (exit)
 
             Console.WriteLine("Наибольшее из введённых чисел -> " + max);
             break;
-            
+
         case 3:
+            // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+            int num = 10;
+
+            if (num % 2 == 1)
+            {
+                Console.WriteLine("Число " + num + " является: НЕЧЁТНЫМ");
+            }
+            else
+            {
+                Console.WriteLine("Число " + num + "является: ЧЁТНЫМ");
+            }
             break;
+            
         case 4:
             break;
         default:
@@ -64,4 +77,3 @@ while (exit)
             break;
     }
 }
-
